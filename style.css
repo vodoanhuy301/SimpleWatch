@@ -1,0 +1,96 @@
+:root {
+  --dark-background: black;
+  --light-background: white;
+  --dark-text: white;
+  --light-text: black;
+}
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+.watch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#watch-img {
+  width: 500px;
+  height: auto;
+  position: relative;
+}
+#watch-time {
+  position: absolute;
+  color: var(--dark-text);
+  font-size: 36px;
+  margin-right: 10px;
+}
+#watch-day {
+  position: absolute;
+  top: 360px;
+  left: 40%;
+  color: var(--dark-text);
+  font-size: 36px;
+  font-weight: 200;
+  margin-right: 10px;
+}
+#watch-month {
+  position: absolute;
+  top: 360px;
+  right: 52%;
+  color: var(--dark-text);
+  font-size: 36px;
+  font-weight: 200;
+  margin-right: 10px;
+}
+#watch-beat {
+  position: absolute;
+  top: 510px;
+  color: var(--dark-text);
+  font-size: 30px;
+  font-weight: 400;
+  margin-right: 10px;
+  transition: all 0.3s ease-in;
+}
+.title {
+  color: var(--dark-text);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--dark-background);
+}
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#colors{
+  font-size: 26px;
+  outline: 0;
+  text-align: center;
+  width: 200px;
+  margin: 10px;
+  background-color: var(--dark-background);
+  color: var(--dark-text);
+  border-radius: 10px;
+  padding: 5px;
+}
+.label-colors {
+  color: var(--dark-text);
+  font-size: 24px;
+}
+#theme {
+  background-color: var(--dark-background);
+  color: var(--dark-text);
+  font-size: 26px;
+  outline: 0;
+  text-align: center;
+  width: 200px;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+}

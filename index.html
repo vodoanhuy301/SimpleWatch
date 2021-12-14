@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Watch</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="watch">
+      <img id="watch-img" src="./orange.png" alt="test">
+      <h1 id="watch-time">00:00:00</h1>
+      <h3 id="watch-day">00</h3>
+      <h3 id="watch-month">00</h3>
+      <h3 id="watch-beat">70</h3>
+    </div>
+    <div class="menu">
+      <h1 class="title">My Smartwatch</h1>
+      <label class="label-colors" for="colors">Choose a color:</label>
+      <select id="colors"onchange="changeColors(this.value)">
+        <option value="black.png">Black</option>
+        <option value="blue.png">Blue</option>
+        <option value="orange.png" selected>Orange</option>
+        <option value="pink.png">Pink</option>
+      </select>
+      <label class="label-colors" for="theme">Choose a theme:</label>
+      <select id="theme"onchange="changeTheme(this.value)">
+        <option value="dark" selected>Dark</option>
+        <option value="light">Light</option>
+      </select>
+    </div>
+   
+  </div>
+  <script src="./script.js"></script>
+</body>
+
+</html>
