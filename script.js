@@ -6,42 +6,44 @@ setInterval(function () {
   var minute = time.getMinutes();
   var second = time.getSeconds();
 
-  var myWatch = document.getElementById("watch-time");
-  var myDay = document.getElementById("watch-day");
-  var myMonth = document.getElementById("watch-month");
+  var myWatch = $("#watch-time");
+  var myDay = $("#watch-day");
+  var myMonth = $("#watch-month");
 
-  myWatch.innerHTML = hour + ":" + minute + ":" + second;
-  myDay.innerHTML = day;
-  myMonth.innerHTML = month + 1;
+  myWatch.html(hour + ":" + minute + ":" + second);
+  myDay.html(day);
+  myMonth.html(month + 1);
 }, 1000);
 setInterval(function () {
-  var myBeat = document.getElementById("watch-beat");
+  var myBeat = $("#watch-beat");
   const random = (min, max) => Math.random() * (max - min) + min;
   var font = random(1, 2).toFixed(1);
-  myBeat.setAttribute("style", "transform: scale(" + font + ")");
+  myBeat.css("transform", "scale(" + font + ")");
 }, 100);
 setInterval(function () {
   var beat = Math.round(Math.random() * 10);
-  var myBeat = document.getElementById("watch-beat");
-  myBeat.innerHTML = 60 + beat;
+  var myBeat = $("#watch-beat");
+  myBeat.html(60 + beat);
 }, 5000);
 function changeColors(color) {
-  var watch = document.getElementById("watch-img");
-  watch.setAttribute("src", "./" + color);
+  var watch = $("#watch-img");
+  watch.attr("src", "./" + color);
 }
 function changeTheme(theme) {
-  var container = document.getElementsByClassName("container")[0];
-  var title = document.getElementsByClassName("title")[0];
-  var labelColors = document.getElementsByClassName("label-colors");
-  var colors = document.getElementById("colors");
-  var themes = document.getElementById("theme");
-  colors.style.backgroundColor = "var(--" + theme + "-background)";
-  colors.style.color = "var(--" + theme + "-text)";
-  themes.style.backgroundColor = "var(--" + theme + "-background)";
-  themes.style.color = "var(--" + theme + "-text)";
-  container.style.backgroundColor = "var(--" + theme + "-background)";
-  title.style.color = "var(--" + theme + "-text)";
-  for (var i = 0; i < labelColors.length; i++) {
-    labelColors[i].style.color = "var(--" + theme + "-text)";
-  }
+  var container = $(".container");
+  var title = $(".title");
+  var labelColors = $(".label-colors");
+  var colors = $("#colors");
+  var themes = $("#theme");
+  colors.css({
+    "background-color": "var(--" + theme + "-background)",
+    "color": "var(--" + theme + "-text)",
+  });
+  themes.css({
+    "background-color": "var(--" + theme + "-background)",
+    "color": "var(--" + theme + "-text)",
+  });
+  container.css("background-color","var(--" + theme + "-background)");
+  title.css("color","var(--" + theme + "-text)");
+labelColors.css("color","var(--" + theme + "-text)"); 
 }
