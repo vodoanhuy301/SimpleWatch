@@ -1,7 +1,7 @@
 # SimpleWatch
 SimpleWatch with JS, HTML, CSS
 
-- Javascript DOM: 
+- Javascript DOM(updated using jQuery methods): 
     + Change img for each colors
     + Change theme: dark and light
 - SimpleWatch: 
